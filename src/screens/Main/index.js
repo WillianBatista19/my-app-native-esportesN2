@@ -4,6 +4,7 @@ import axios from "axios";
 import { StyleSheet } from "react-native";
 import FormPlayer from "../../components/forms/FormPlayer";
 import PlayerList from "../../components/PlayerList";
+import FormTeam from "../../components/forms/FormTeam";
 
 export default function Main() {
   const [resultados, setResultados] = useState([{}]);
@@ -64,6 +65,7 @@ export default function Main() {
     <View style={styles.container}>
       <FormPlayer seachPlayer={seachPlayer} />
       {resultados && <PlayerList players={resultados} />}
+      <FormTeam/>
     </View>
   );
 }
